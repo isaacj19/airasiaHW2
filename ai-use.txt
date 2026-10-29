@@ -1,0 +1,14 @@
+1. AI Tool Used:
+Google Gemini
+
+2. Prompts Used:
+- "Translate the provided wireframes I created into HTML page structures"
+- "Help me construct an external CSS stylesheet for an AirAsia Rewards theme using CSS Grid for card layouts, Flexbox for detail panels, and custom styling for forms and buttons."
+- "My CSS styles are not applying and pages are returning 404/routing errors when running the PHP dev server in GitHub Codespaces. How do I fix the server command and file paths?"
+- "How do I make the base URL automatically open login.php without requiring the user to manually type the filename in the address bar?"
+
+3. Explanation of AI Support:
+I had started to creat the HTML page structures based my HW1 design, and had Gemini help me finalize them and fill in some gaps. I used AI primarily as an assistant for writing the CSS stylesheet and debugging the development environment. The AI provided CSS rules for the AirAsia red color scheme, card grid catalog layout, and form controls. It was also very helpful for troubleshooting runtime issues in GitHub Codespaces, specifically resolving path issues and setting up a root index.php file to handle automatic redirection to login.php.
+
+4. Example of AI Suggestion Tested, Changed, or Rejected:
+When debugging why my CSS wasn't applying and pages weren't switching, the AI initially suggested launching the server with `php -S 0.0.0.0:8000 login.php`. Upon testing, I found that passing `login.php` forced PHP to act as a router script, intercepting every single HTTP request (including requests for `css/styles.css` and other pages) and re-rendering `login.php`. I rejected that command and instead ran `php -S 0.0.0.0:8000` while creating a clean `index.php` file to handle the root redirect.
